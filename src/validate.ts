@@ -4,7 +4,7 @@ import type { AnySchemaObject, Options } from "ajv";
 import _Ajv04 from "ajv-draft-04";
 import _addFormats from "ajv-formats";
 import { Ajv2019 } from "ajv/dist/2019.js";
-import draft7MetaSchema from "ajv/dist/refs/json-schema-draft-07.json" assert {
+import draft7MetaSchema from "ajv/dist/refs/json-schema-draft-07.json" with {
 	type: "json",
 };
 import { consola } from "consola";
