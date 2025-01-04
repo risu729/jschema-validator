@@ -44,8 +44,7 @@ const results = await Promise.all(
 			const content = await readJsonFile(path);
 			await validate(content, path, fileConfig);
 		} catch (error) {
-			consola.error(`Error validating ${file}`);
-			consola.error(error);
+			consola.error(`Error validating ${file}\n`, error);
 			return false;
 		}
 		return true;
