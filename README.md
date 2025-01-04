@@ -1,5 +1,11 @@
 # 🧩 jschema-validator
 
+[![Version](https://img.shields.io/npm/v/jschema-validator)](https://www.npmjs.com/package/jschema-validator)
+[![License](https://img.shields.io/npm/l/jschema-validator)](https://github.com/risu729/jschema-validator?tab=License-1-ov-file)
+[![NPM Downloads](https://img.shields.io/npm/dm/jschema-validator)](https://www.npmjs.com/package/jschema-validator)
+[![Last commit](https://img.shields.io/github/last-commit/risu729/jschema-validator)](https://github.com/risu729/jschema-validator/commits/main/)
+[![Repo stars](https://img.shields.io/github/stars/risu729/jschema-validator)](https://github.com/risu729/jschema-validator/stargazers)
+
 **`jschema-validator`** is a CLI tool to validate JSON/JSONC/JSON5 files against JSON Schema in `$schema` field. Both URLs and local files are supported.
 
 ## 🛠️ Installation
