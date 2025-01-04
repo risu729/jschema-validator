@@ -1,8 +1,11 @@
 import { readFile } from "node:fs/promises";
 import { extname } from "node:path";
 import ignoreWalk from "ignore-walk";
-import { parse as parseJson5 } from "json5";
+import json5 from "json5";
 import { parse as parseJsonc } from "jsonc-parser";
+
+// cannot use named import because json5 is commonjs
+const { parse: parseJson5 } = json5;
 
 const extensions = ["json", "jsonc", "json5"].map((ext) => `.${ext}`);
 
