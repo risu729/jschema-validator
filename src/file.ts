@@ -4,7 +4,7 @@ import ignoreWalk from "ignore-walk";
 import json5 from "json5";
 import { parse as parseJsonc } from "jsonc-parser";
 
-// cannot ues named import because json5 is commonjs
+// cannot use named import because json5 is commonjs
 const { parse: parseJson5 } = json5;
 
 const extensions = ["json", "jsonc", "json5"].map((ext) => `.${ext}`);
