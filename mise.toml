@@ -1,0 +1,46 @@
+# ref: https://mise.jdx.dev/configuration.html
+#:schema https://mise.jdx.dev/schema/mise.json
+
+min_version = "2025.1.0"
+
+[tools]
+bun = "1.1.42"
+node = "23.5.0"
+cargo-binstall = "1.10.19" # cspell:ignore binstall
+uv = "0.5.14"
+"npm:semantic-release" = "24.2.1"
+"aqua:biomejs/biome" = "1.9.4"
+actionlint = "1.7.5"
+# required for actionlint
+shellcheck = "0.10.0"
+"aqua:suzuki-shunsuke/ghalint" = "1.2.1" # cspell:ignore shunsuke
+"aqua:suzuki-shunsuke/pinact" = "1.1.2"
+taplo = "0.9.3"
+"npm:prettier" = "3.4.2"
+yamlfmt = "0.14.0"
+yamllint = "1.35.1"
+"npm:cspell" = "8.17.1"
+"cargo:lychee" = "0.18.0"
+typos = "1.29.4"
+"npm:ignore-sync" = "8.0.0"
+"npm:json5" = "2.2.3"
+
+[settings]
+experimental = true
+
+[settings.npm]
+bun = true
+
+# cspell:ignore pipx
+[settings.pipx]
+uvx = true
+
+[task_config]
+includes = ["tasks.toml"]
+
+[hooks]
+postinstall = """
+{% if env.CI is undefined %}
+  mise run buni
+{% endif %}
+"""

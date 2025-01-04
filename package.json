@@ -1,0 +1,57 @@
+{
+	"$schema": "https://json.schemastore.org/package.json",
+	"name": "jschema-validator",
+	"version": "0.0.0-development",
+	"license": "MIT",
+	"author": "risu729",
+	"homepage": "https://github.com/risu729/jschema-validator#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/risu729/jschema-validator.git"
+	},
+	"bugs": {
+		"url": "https://github.com/risu729/jschema-validator/issues"
+	},
+	"dependencies": {
+		"@sindresorhus/is": "7.0.1",
+		"ajv": "8.17.1",
+		"ajv-draft-04": "1.0.0",
+		"ajv-formats": "3.0.1",
+		"c12": "2.0.1",
+		"consola": "3.3.3",
+		"ignore-walk": "7.0.0",
+		"json5": "2.2.3",
+		"jsonc-parser": "3.3.1",
+		"meow": "13.2.0"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "19.6.1",
+		"@commitlint/config-conventional": "19.6.0",
+		"@commitlint/cz-commitlint": "19.6.1",
+		"@commitlint/types": "19.5.0",
+		"@cspell/cspell-types": "8.17.1",
+		"@total-typescript/tsconfig": "1.0.4",
+		"@tsconfig/bun": "1.0.7",
+		"@tsconfig/strictest": "2.0.5",
+		"@types/bun": "1.1.14",
+		"@types/ignore-walk": "4.0.3",
+		"commitizen": "4.3.1",
+		"knip": "5.41.1",
+		"prettier": "3.4.2",
+		"typescript": "5.7.2"
+	},
+	"type": "module",
+	"files": ["dist", "!*.tsbuildinfo", "src"],
+	"bin": {
+		"jschema-validator": "dist/bin.js"
+	},
+	"exports": {
+		".": "./dist/index.js",
+		"./package.json": "./package.json"
+	},
+	"types": "./dist/index.d.ts",
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	}
+}

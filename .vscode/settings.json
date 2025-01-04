@@ -1,0 +1,46 @@
+{
+	// ref: https://code.visualstudio.com/docs/getstarted/settings#_workspace-settings
+
+	"files.autoSave": "afterDelay",
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+
+	// ref: https://biomejs.dev/reference/vscode/
+	"editor.codeActionsOnSave": {
+		// cspell:ignore quickfix
+		"quickfix.biome": "explicit",
+		"source.organizeImports.biome": "explicit"
+	},
+	// ref: https://biomejs.dev/internals/language-support/
+	"[javascript][typescript][json][jsonc]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+
+	"[yaml][github-actions-workflow]": {
+		// cspell:ignore bluebrown
+		"editor.defaultFormatter": "bluebrown.yamlfmt"
+	},
+	"[toml]": {
+		// cspell:ignore tamasfe
+		"editor.defaultFormatter": "tamasfe.even-better-toml"
+	},
+	"[markdown][json5]": {
+		// cspell:ignore esbenp
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+
+	"files.associations": {
+		"*ignore-sync": "ini",
+		// cspell:ignore czrc
+		".czrc": "jsonc"
+	},
+
+	"files.readonlyInclude": {
+		// auto-generated
+		"**/.gitignore": true,
+		"**/bun.lock": true
+	},
+
+	"typescript.disableAutomaticTypeAcquisition": true,
+	"typescript.tsdk": "node_modules/typescript/lib"
+}
