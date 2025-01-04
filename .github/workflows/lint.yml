@@ -141,7 +141,8 @@ jobs:
     needs:
       - lint
       - commitlint
-    if: ${{ !cancelled() }}
+    # skip if the workflow is called from another workflow
+    if: ${{ !cancelled() && contains(github.workflow_ref, '/lint.yml') }}
 
     runs-on: ubuntu-24.04
     timeout-minutes: 5
