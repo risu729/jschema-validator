@@ -6,7 +6,6 @@ min_version = "2025.1.1"
 [tools]
 bun = "1.1.42"
 node = "23.5.0"
-cargo-binstall = "1.10.19" # cspell:ignore binstall
 "npm:semantic-release" = "24.2.1"
 "aqua:biomejs/biome" = "1.9.4"
 actionlint = "1.7.6"
@@ -19,7 +18,7 @@ taplo = "0.9.3"
 yamlfmt = "0.14.0"
 yamllint = "1.35.1"
 "npm:cspell" = "8.17.1"
-"cargo:lychee" = "0.18.0"
+"ubi:lycheeverse/lychee" = "lychee-v0.18.0" # cspell:ignore lycheeverse
 typos = "1.29.4"
 "npm:ignore-sync" = "8.0.0"
 "npm:json5" = "2.2.3"
