@@ -37,9 +37,11 @@ export const readJsonFile = async (path: string): Promise<object> => {
 	const extension = extname(path);
 	if (extension === ".json") {
 		try {
-			return await import(path, {
-				with: { type: "json" },
-			});
+			return (
+				await import(path, {
+					with: { type: "json" },
+				})
+			).default;
 		} catch {
 			// fallback to jsonc
 		}

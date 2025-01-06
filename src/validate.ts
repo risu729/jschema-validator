@@ -63,9 +63,11 @@ const loadSchema = async (
 	if (is.urlString(schema)) {
 		return await loadRemoteSchema(true)(schema);
 	}
-	return await import(resolve(dirname(path), schema), {
-		with: { type: "json" },
-	});
+	return (
+		await import(resolve(dirname(path), schema), {
+			with: { type: "json" },
+		})
+	).default;
 };
 
 /**
