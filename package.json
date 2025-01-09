@@ -38,7 +38,7 @@
 		"commitizen": "4.3.1",
 		"knip": "5.41.1",
 		"prettier": "3.4.2",
-		"typescript": "5.7.2"
+		"typescript": "5.7.3"
 	},
 	"type": "module",
 	"files": ["dist", "!*.tsbuildinfo", "src"],
