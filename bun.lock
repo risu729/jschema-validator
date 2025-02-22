@@ -19,7 +19,7 @@
         "@commitlint/config-conventional": "19.7.1",
         "@commitlint/cz-commitlint": "19.6.1",
         "@commitlint/types": "19.5.0",
-        "@cspell/cspell-types": "8.17.4",
+        "@cspell/cspell-types": "8.17.5",
         "@total-typescript/tsconfig": "1.0.4",
         "@tsconfig/bun": "1.0.7",
         "@tsconfig/strictest": "2.0.5",
@@ -73,7 +73,7 @@
 
     "@commitlint/types": ["@commitlint/types@19.5.0", "", { "dependencies": { "@types/conventional-commits-parser": "^5.0.0", "chalk": "^5.3.0" } }, "sha512-DSHae2obMSMkAtTBSOulg5X7/z+rGLxcXQIkg3OmWvY6wifojge5uVMydfhUvs7yQj+V7jNmRZ2Xzl8GJyqRgg=="],
 
-    "@cspell/cspell-types": ["@cspell/cspell-types@8.17.4", "", {}, "sha512-1K6tXEMXSaoUXhH3TiaCyh3Nh8ZE0wPej0+wa5HAMtdcY1B3FGvHZ9DltkgZxbzs3bGNXIySFE5ITqULbhweBA=="],
+    "@cspell/cspell-types": ["@cspell/cspell-types@8.17.5", "", {}, "sha512-91y2+0teunRSRZj940ORDA3kdjyenrUiM+4j6nQQH24sAIAJdRmQl2LG3eUTmeaSReJGkZIpnToQ6DyU5cC88Q=="],
 
     "@nodelib/fs.scandir": ["@nodelib/fs.scandir@4.0.1", "", { "dependencies": { "@nodelib/fs.stat": "4.0.0", "run-parallel": "^1.2.0" } }, "sha512-vAkI715yhnmiPupY+dq+xenu5Tdf2TBQ66jLvBIcCddtz+5Q8LbMKaf9CIJJreez8fQ8fgaY+RaywQx8RJIWpw=="],
 
