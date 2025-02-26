@@ -5,7 +5,7 @@ min_version = "2025.2.8"
 
 [tools]
 bun = "1.2.4"
-node = "23.8.0"
+node = "23.9.0"
 "npm:semantic-release" = "24.2.3"
 "aqua:biomejs/biome" = "1.9.4"
 actionlint = "1.7.7"
