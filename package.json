@@ -36,7 +36,7 @@
 		"@types/bun": "1.2.15",
 		"@types/ignore-walk": "4.0.3",
 		"commitizen": "4.3.1",
-		"knip": "5.59.0",
+		"knip": "5.59.1",
 		"prettier": "3.5.3",
 		"typescript": "5.8.3"
 	},
