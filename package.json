@@ -31,7 +31,7 @@
 		"@commitlint/types": "19.8.1",
 		"@cspell/cspell-types": "9.0.2",
 		"@total-typescript/tsconfig": "1.0.4",
-		"@tsconfig/bun": "1.0.7",
+		"@tsconfig/bun": "1.0.8",
 		"@tsconfig/strictest": "2.0.5",
 		"@types/bun": "1.2.15",
 		"@types/ignore-walk": "4.0.3",
