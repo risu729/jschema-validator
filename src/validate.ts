@@ -1,12 +1,14 @@
 import { dirname, resolve } from "node:path";
 import is from "@sindresorhus/is";
 import type { AnySchemaObject, Options } from "ajv";
-import _Ajv04 from "ajv-draft-04";
-import _addFormats from "ajv-formats";
 import { Ajv2019 } from "ajv/dist/2019.js";
+// ref: https://github.com/biomejs/biome/issues/6610
+// biome-ignore lint/nursery/useJsonImportAttribute: bug with line breaks
 import draft7MetaSchema from "ajv/dist/refs/json-schema-draft-07.json" with {
 	type: "json",
 };
+import _Ajv04 from "ajv-draft-04";
+import _addFormats from "ajv-formats";
 import { consola } from "consola";
 
 // cspell:ignore nodenext
@@ -51,7 +53,7 @@ const loadSchema = async (
 ): Promise<AnySchemaObject | undefined> => {
 	if (!("$schema" in content)) {
 		consola.info(`$schema not found in ${path}`);
-		return undefined;
+		return;
 	}
 	const schema = content.$schema;
 	if (!is.string(schema)) {
@@ -89,9 +91,9 @@ export const validate = async (
 	// use draft-2019-09, draft-2020-12, and draft-07 meta schemas by default
 	// ref: https://ajv.js.org/guide/schema-language.html#draft-2019-09-and-draft-2020-12
 	const ajv = new Ajv2019({
-		strict: false,
 		// latest version of ajv does not support draft-04 meta schema
 		loadSchema: loadRemoteSchema(false),
+		strict: false,
 		...config,
 	});
 	ajv.addMetaSchema(draft7MetaSchema);
@@ -109,16 +111,16 @@ export const validate = async (
 		}
 
 		// fallback to ajv-draft-04 if draft-04 meta schema is used
-		const ajv = new Ajv04({
-			strict: false,
+		const ajv04 = new Ajv04({
 			loadSchema: loadRemoteSchema(true),
+			strict: false,
 			...config,
 		});
 		// add formats not included by default
-		addFormats(ajv);
-		const validate = await ajv.compileAsync(schema);
-		if (!validate(content)) {
-			throw new Error(ajv.errorsText(validate.errors));
+		addFormats(ajv04);
+		const validatedSchema04 = await ajv04.compileAsync(schema);
+		if (!validatedSchema04(content)) {
+			throw new Error(ajv04.errorsText(validatedSchema04.errors));
 		}
 	}
 
