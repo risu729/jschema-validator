@@ -3,6 +3,9 @@
 import type { KnipConfig } from "knip";
 
 const config: KnipConfig = {
+	// mise tools are not recognized as plugins
+	cspell: true,
+	entry: ["src/bin.ts", "src/index.ts"],
 	ignoreBinaries: [
 		// mise tools are not detected as binaries
 		"semantic-release",
@@ -14,9 +17,6 @@ const config: KnipConfig = {
 		// biome-ignore lint/nursery/noSecrets: false positive
 		"conventional-changelog-conventionalcommits",
 	],
-	entry: ["src/bin.ts", "src/index.ts"],
-	// mise tools are not recognized as plugins
-	cspell: true,
 };
 
 export default config;

@@ -5,9 +5,10 @@ import json5 from "json5";
 import { parse as parseJsonc } from "jsonc-parser";
 
 // cannot use named import because json5 is commonjs
+// biome-ignore lint/nursery/useExplicitType: no need to type import
 const { parse: parseJson5 } = json5;
 
-const extensions = ["json", "jsonc", "json5"].map((ext) => `.${ext}`);
+const extensions: string[] = ["json", "jsonc", "json5"].map((ext) => `.${ext}`);
 
 /**
  * Walk through the directory and return all JSON files.
@@ -16,8 +17,8 @@ const extensions = ["json", "jsonc", "json5"].map((ext) => `.${ext}`);
  */
 export const walk = async (rootDir: string): Promise<string[]> => {
 	const files = await ignoreWalk({
-		path: rootDir,
 		ignoreFiles: [".gitignore"],
+		path: rootDir,
 	});
 	return (
 		files

@@ -1,13 +1,8 @@
 {
 	"$schema": "https://json.schemastore.org/package.json",
-	"name": "jschema-validator",
-	"version": "0.0.0-development",
-	"license": "MIT",
 	"author": "risu729",
-	"homepage": "https://github.com/risu729/jschema-validator#readme",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/risu729/jschema-validator.git"
+	"bin": {
+		"jschema-validator": "dist/bin.js"
 	},
 	"bugs": {
 		"url": "https://github.com/risu729/jschema-validator/issues"
@@ -40,18 +35,27 @@
 		"prettier": "3.6.2",
 		"typescript": "5.8.3"
 	},
-	"type": "module",
-	"files": ["dist", "!*.tsbuildinfo", "src"],
-	"bin": {
-		"jschema-validator": "dist/bin.js"
-	},
 	"exports": {
 		".": "./dist/index.js",
 		"./package.json": "./package.json"
 	},
-	"types": "./dist/index.d.ts",
+	"files": [
+		"dist",
+		"!*.tsbuildinfo",
+		"src"
+	],
+	"homepage": "https://github.com/risu729/jschema-validator#readme",
+	"license": "MIT",
+	"name": "jschema-validator",
 	"publishConfig": {
 		"access": "public",
 		"provenance": true
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/risu729/jschema-validator.git"
+	},
+	"type": "module",
+	"types": "./dist/index.d.ts",
+	"version": "0.0.0-development"
 }

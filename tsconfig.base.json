@@ -1,12 +1,12 @@
 {
 	// ref: https://www.typescriptlang.org/tsconfig/
 	"$schema": "https://json.schemastore.org/tsconfig",
-	"extends": [
-		"@tsconfig/bun/tsconfig.json",
-		"@tsconfig/strictest/tsconfig.json"
-	],
 	"compilerOptions": {
 		"incremental": true
 	},
-	"exclude": ["node_modules", "dist", "src"]
+	"exclude": ["node_modules", "dist", "src"],
+	"extends": [
+		"@tsconfig/bun/tsconfig.json",
+		"@tsconfig/strictest/tsconfig.json"
+	]
 }

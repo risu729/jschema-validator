@@ -6,10 +6,7 @@ import { loadConfig as load } from "c12";
  * Set to `false` to disable validation for a specific file.
  * @see https://ajv.js.org/options.html
  */
-export type Config = Record<
-	string,
-	Exclude<Options, "strict" | "loadSchema"> | false
->;
+type Config = Record<string, Exclude<Options, "strict" | "loadSchema"> | false>;
 
 // configure ajv options for each json file
 // ref: https://ajv.js.org/options.html
@@ -26,12 +23,14 @@ const defaultConfig: Config = {
 	},
 };
 
-export const loadConfig = async (rootDir: string): Promise<Config> => {
+const loadConfig = async (rootDir: string): Promise<Config> => {
 	const { config } = await load<Config>({
 		cwd: rootDir,
+		defaults: defaultConfig,
 		name: "jschema",
 		rcFile: false,
-		defaults: defaultConfig,
 	});
 	return config;
 };
+
+export { type Config, loadConfig };

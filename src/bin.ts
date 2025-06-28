@@ -5,11 +5,11 @@ import { cwd, exit } from "node:process";
 import is from "@sindresorhus/is";
 import { consola } from "consola";
 import meow from "meow";
-import { loadConfig } from "./config.js";
+import { type Config, loadConfig } from "./config.js";
 import { readJsonFile, walk } from "./file.js";
 import { validate } from "./validate.js";
 
-const rootDir = cwd();
+const rootDir: string = cwd();
 
 meow(
 	`
@@ -28,11 +28,11 @@ meow(
 	},
 );
 
-const config = await loadConfig(rootDir);
+const config: Config = await loadConfig(rootDir);
 
-const files = await walk(rootDir);
+const files: string[] = await walk(rootDir);
 
-const results = await Promise.all(
+const results: boolean[] = await Promise.all(
 	files.map(async (file): Promise<boolean> => {
 		const fileConfig = config[file];
 		if (fileConfig === false) {
