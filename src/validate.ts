@@ -2,8 +2,6 @@ import { dirname, resolve } from "node:path";
 import is from "@sindresorhus/is";
 import type { AnySchemaObject, Options } from "ajv";
 import { Ajv2019 } from "ajv/dist/2019.js";
-// ref: https://github.com/biomejs/biome/issues/6610
-// biome-ignore lint/nursery/useJsonImportAttribute: bug with line breaks
 import draft7MetaSchema from "ajv/dist/refs/json-schema-draft-07.json" with {
 	type: "json",
 };
