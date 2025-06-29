@@ -6,6 +6,7 @@ import draft7MetaSchema from "ajv/dist/refs/json-schema-draft-07.json" with {
 	type: "json",
 	type: "json",
 	type: "json",
+	type: "json",
 };
 import _Ajv04 from "ajv-draft-04";
 import _addFormats from "ajv-formats";
