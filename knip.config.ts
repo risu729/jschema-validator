@@ -14,7 +14,6 @@ const config: KnipConfig = {
 		// cannot be detected automatically
 		"@commitlint/cli",
 		// referenced in resolved config of commitlint.config.ts but not a dependency
-		// biome-ignore lint/nursery/noSecrets: false positive
 		"conventional-changelog-conventionalcommits",
 	],
 };
