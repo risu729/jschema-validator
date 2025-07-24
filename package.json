@@ -14,7 +14,7 @@
 		"ajv-formats": "3.0.1",
 		"c12": "3.1.0",
 		"consola": "3.4.2",
-		"ignore-walk": "7.0.0",
+		"ignore-walk": "8.0.0",
 		"json5": "2.2.3",
 		"jsonc-parser": "3.3.1",
 		"meow": "13.2.0"
