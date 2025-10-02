@@ -5,9 +5,9 @@ import { cwd, exit } from "node:process";
 import is from "@sindresorhus/is";
 import { consola } from "consola";
 import meow from "meow";
-import { type Config, loadConfig } from "./config.js";
-import { readJsonFile, walk } from "./file.js";
-import { validate } from "./validate.js";
+import { type Config, loadConfig } from "./config.ts";
+import { readJsonFile, walk } from "./file.ts";
+import { validate } from "./validate.ts";
 
 const rootDir: string = cwd();
 
