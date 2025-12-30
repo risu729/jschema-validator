@@ -8,7 +8,7 @@
 		"url": "https://github.com/risu729/jschema-validator/issues"
 	},
 	"dependencies": {
-		"@sindresorhus/is": "7.1.1",
+		"@sindresorhus/is": "7.2.0",
 		"ajv": "8.17.1",
 		"ajv-draft-04": "1.0.0",
 		"ajv-formats": "3.0.1",
