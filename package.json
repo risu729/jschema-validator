@@ -20,9 +20,9 @@
 		"meow": "14.1.0"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "20.5.0",
+		"@commitlint/cli": "20.5.2",
 		"@commitlint/config-conventional": "20.5.0",
-		"@commitlint/cz-commitlint": "20.5.1",
+		"@commitlint/cz-commitlint": "20.5.2",
 		"@commitlint/types": "20.5.0",
 		"@cspell/cspell-types": "9.8.0",
 		"@total-typescript/tsconfig": "1.0.4",
